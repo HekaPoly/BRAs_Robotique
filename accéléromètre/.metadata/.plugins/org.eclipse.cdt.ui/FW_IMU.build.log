@@ -1,0 +1,10 @@
+17:10:46 **** Incremental Build of configuration Debug for project FW_IMU ****
+make -j8 all 
+arm-none-eabi-size  FW_IMU.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31640	    476	   3124	  35240	   89a8	FW_IMU.elf
+Finished building: default.size.stdout
+ 
+
+17:10:47 Build Finished. 0 errors, 0 warnings. (took 1s.585ms)
+

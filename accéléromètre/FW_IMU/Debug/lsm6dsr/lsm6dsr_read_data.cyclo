@@ -1,0 +1,6 @@
+../lsm6dsr/lsm6dsr_read_data.c:154:6:lsm6dsr_read_data_polling	14
+../lsm6dsr/lsm6dsr_read_data.c:345:16:platform_write	1
+../lsm6dsr/lsm6dsr_read_data.c:372:16:platform_read	1
+../lsm6dsr/lsm6dsr_read_data.c:397:13:tx_com	1
+../lsm6dsr/lsm6dsr_read_data.c:414:13:platform_delay	1
+../lsm6dsr/lsm6dsr_read_data.c:426:13:platform_init	1

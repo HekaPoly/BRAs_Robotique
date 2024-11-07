@@ -1,0 +1,21 @@
+19:17:34 **** Incremental Build of configuration Debug for project TEST_IMU ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:105:4: warning: implicit declaration of function 'lsm6dsr_read_data_polling' [-Wimplicit-function-declaration]
+  105 |    lsm6dsr_read_data_polling();
+      |    ^~~~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "TEST_IMU.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\nathf\OneDrive - polymtl.ca\HEKA\bras assistance\Test_imu\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TEST_IMU.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TEST_IMU.elf
+ 
+arm-none-eabi-size  TEST_IMU.elf 
+arm-none-eabi-objdump -h -S TEST_IMU.elf  > "TEST_IMU.list"
+   text	   data	    bss	    dec	    hex	filename
+  31484	    476	   3108	  35068	   88fc	TEST_IMU.elf
+Finished building: default.size.stdout
+ 
+Finished building: TEST_IMU.list
+ 
+
+19:17:36 Build Finished. 0 errors, 1 warnings. (took 2s.308ms)
+
